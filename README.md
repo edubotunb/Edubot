@@ -4,7 +4,7 @@
   <img src="images/UnB.png" alt="Logo UnB" width="600"/>
 </p>
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 O **Edubot** é uma iniciativa de extensão universitária da **Universidade de Brasília (UnB)**, vinculada ao Laboratório de Robótica e Automação (**LARA**) e ao capítulo estudantil da **Robotics and Automation Society (RAS)** do IEEE. 
 
@@ -16,7 +16,7 @@ Nosso objetivo é promover o ensino de **robótica educacional** e programação
 
 ---
 
-## 🎯 Objetivos do Edubot
+## Objetivos do Edubot
 
 *   Democratizar o acesso à educação tecnológica.
 *   Desenvolver habilidades de resolução de problemas e pensamento lógico.
@@ -27,7 +27,7 @@ Nosso objetivo é promover o ensino de **robótica educacional** e programação
 
 ---
 
-## 🤖 Robô Utilizado
+## Robô Utilizado
 
 O robô escolhido para as nossas atividades é o **Sparki**, desenvolvido pela ArcBotics de código aberto. Ele é um robô educativo acessível e repleto de sensores e atuadores que permitem uma grande variedade de experimentos e desafios didáticos.
 
@@ -43,30 +43,27 @@ As programações do Sparki são realizadas utilizando **C/C++** através da IDE
 
 ---
 
-## 📂 Estrutura deste Repositório
+## Estrutura deste Repositório
 
 Este repositório concentra todo o material técnico, didático e de treinamento da equipe, organizado da seguinte forma:
 
-*   📁 **`/codigos_sparki`**
+*   **`/codigos_sparki`**
     Códigos-fonte utilizados no robô. Contém rotinas de testes diagnósticos (para motores e sensores individuais) e os códigos finais (em C++) aplicados nos desafios propostos em sala de aula.
     
-*   📁 **`/tutoriais_internos`**
+*   **`/tutoriais_internos`**
     Base de conhecimento da equipe. Inclui guias de nivelamento e manuais de instalação dos softwares (Arduino IDE, Sparkiduino, Ardublock) e de configuração de drivers em sistemas Windows e Linux.
     
-*   📁 **`/apostila`**
+*   **`/apostila`**
     Material didático. Contém as versões finais em PDF utilizadas nas escolas, além dos arquivos em código-fonte (`.tex` para Overleaf) e imagens, permitindo a atualização contínua do conteúdo conforme o cronograma do projeto.
 
 ---
 
-## 🤝 Apoio Institucional
+## Apoio Institucional
 
 *   Universidade de Brasília (UnB)
 *   Laboratório de Robótica e Automação (LARA)
 *   IEEE Robotics and Automation Society (RAS) - Capítulo Estudantil UnB
 
-## 📜 Licença
-
-Este projeto é disponibilizado sob a licença [MIT](LICENSE).
 
 ---
 <p align="center">
