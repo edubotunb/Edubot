@@ -64,6 +64,4 @@ Este repositório concentra todo o material técnico, didático e de treinamento
 
 
 ---
-<p align="center">
-  <b>Vamos juntos transformar a educação com tecnologia! 🚀🤖</b>
-</p>
+
