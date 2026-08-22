@@ -22,8 +22,7 @@ Nosso objetivo é promover o ensino de **robótica educacional** e programação
 *   Estimular o interesse por carreiras em ciência e engenharia.
 *   Oferecer experiências práticas em programação e robótica.
 
-**Público-Alvo:** Estudantes de escolas públicas do Distrito Federal, priorizando turmas que ainda não tiveram contato prévio com robótica educacional.
-
+**Público-Alvo:** Estudantes de escolas públicas do Distrito Federal.
 ---
 
 ## Robô Utilizado
