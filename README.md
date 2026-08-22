@@ -1,48 +1,74 @@
-# Projeto Edubot
+# 🤖 Projeto Edubot - Robótica Educacional
 
-<img src="images/UnB.png" alt="Foto logo UnB" width="800" height="200"/>
+<p align="center">
+  <img src="images/UnB.png" alt="Logo UnB" width="600"/>
+</p>
 
+## 📌 Sobre o Projeto
 
-## Sobre o Projeto
+O **Edubot** é uma iniciativa de extensão universitária da **Universidade de Brasília (UnB)**, vinculada ao Laboratório de Robótica e Automação (**LARA**) e ao capítulo estudantil da **Robotics and Automation Society (RAS)** do IEEE. 
 
-**Edubot** é uma iniciativa da **Universidade de Brasília (UnB)**, vinculada ao capítulo estudantil da **Robotics and Automation Society (RAS)** do IEEE. O projeto tem como objetivo promover o ensino de **robótica educacional** em escolas públicas do **Distrito Federal**, proporcionando aos estudantes o primeiro contato com conceitos de ciência, tecnologia, engenharia e matemática (STEM).
+Nosso objetivo é promover o ensino de **robótica educacional** e programação em escolas públicas do **Distrito Federal**, proporcionando aos estudantes o primeiro contato com conceitos de Ciência, Tecnologia, Engenharia e Matemática (STEM).
 
-<img src="images/Identificadores RAS UnB.png" alt="Foto logo RAS IEEE" width="400" height="180"/>
+<p align="center">
+  <img src="images/Identificadores RAS UnB.png" alt="Logo RAS IEEE" width="400"/>
+</p>
 
-## Robô Utilizado
+---
 
-O robô escolhido para as atividades é o **Sparki**, desenvolvido pela ArcBotics. Ele é um robô educativo acessível e repleto de sensores e atuadores que permitem uma grande variedade de experimentos e desafios didáticos.
+## 🎯 Objetivos do Edubot
 
-- **Sensores**: ultrassônico, infravermelho, acelerômetro, bússola, entre outros
-- **Atuadores**: motores de rodas, servo motor para caneta, buzzer, LEDs RGB
+*   Democratizar o acesso à educação tecnológica.
+*   Desenvolver habilidades de resolução de problemas e pensamento lógico.
+*   Estimular o interesse por carreiras em ciência e engenharia.
+*   Oferecer experiências práticas em programação e robótica.
 
-<img src="images/sparki.jpg" alt="Foto robô sparki" width="500" height="500"/>
+**Público-Alvo:** Estudantes de escolas públicas do Distrito Federal, priorizando turmas que ainda não tiveram contato prévio com robótica educacional.
 
+---
 
-## Linguagem de Programação
+## 🤖 Robô Utilizado
 
-As programações do Sparki são realizadas utilizando o **SparkiDuino**, uma linguagem própria baseada em **C**, criada pela ArcBotics. O SparkiDuino combina a simplicidade do Arduino com funções específicas para facilitar a programação do robô Sparki, sendo ideal para o aprendizado introdutório em robótica e lógica de programação.
+O robô escolhido para as nossas atividades é o **Sparki**, desenvolvido pela ArcBotics de código aberto. Ele é um robô educativo acessível e repleto de sensores e atuadores que permitem uma grande variedade de experimentos e desafios didáticos.
 
-## Objetivos do Edubot
+*   **Sensores:** Ultrassônico, infravermelho (linha e obstáculo), acelerômetro, bússola, sensor de luz, entre outros.
+*   **Atuadores:** Motores de passo (rodas), servomotor para o ultrassônico, buzzer, gripper (garra) e LEDs RGB.
 
-- Democratizar o acesso à educação tecnológica.
-- Desenvolver habilidades de resolução de problemas e pensamento lógico.
-- Estimular o interesse por carreiras em ciência e engenharia.
-- Oferecer experiências práticas em programação e robótica.
+<p align="center">
+  <img src="images/sparki.jpg" alt="Foto do robô Sparki" width="300"/>
+</p>
 
-## Público-Alvo
+### Linguagem de Programação
+As programações do Sparki são realizadas utilizando **C/C++** através da IDE do Arduino com a biblioteca nativa, além do **SparkiDuino** (criado pela ArcBotics) e **Ardublock** (programação em blocos). Esse ecossistema facilita a programação do robô Sparki, sendo ideal para o aprendizado introdutório em lógica de programação.
 
-Estudantes de escolas públicas do Distrito Federal, do ensino fundamental II ao ensino médio, priorizando turmas que ainda não tiveram contato prévio com robótica educacional.
+---
 
-## Apoio Institucional
+## 📂 Estrutura deste Repositório
 
-- Universidade de Brasília (UnB)
-- IEEE Robotics and Automation Society (RAS) - Capítulo Estudantil UnB
+Este repositório concentra todo o material técnico, didático e de treinamento da equipe, organizado da seguinte forma:
 
-## Licença
+*   📁 **`/codigos_sparki`**
+    Códigos-fonte utilizados no robô. Contém rotinas de testes diagnósticos (para motores e sensores individuais) e os códigos finais (em C++) aplicados nos desafios propostos em sala de aula.
+    
+*   📁 **`/tutoriais_internos`**
+    Base de conhecimento da equipe. Inclui guias de nivelamento e manuais de instalação dos softwares (Arduino IDE, Sparkiduino, Ardublock) e de configuração de drivers em sistemas Windows e Linux.
+    
+*   📁 **`/apostila`**
+    Material didático. Contém as versões finais em PDF utilizadas nas escolas, além dos arquivos em código-fonte (`.tex` para Overleaf) e imagens, permitindo a atualização contínua do conteúdo conforme o cronograma do projeto.
+
+---
+
+## 🤝 Apoio Institucional
+
+*   Universidade de Brasília (UnB)
+*   Laboratório de Robótica e Automação (LARA)
+*   IEEE Robotics and Automation Society (RAS) - Capítulo Estudantil UnB
+
+## 📜 Licença
 
 Este projeto é disponibilizado sob a licença [MIT](LICENSE).
 
 ---
-
-**Vamos juntos transformar a educação com tecnologia! 🚀🤖**
+<p align="center">
+  <b>Vamos juntos transformar a educação com tecnologia! 🚀🤖</b>
+</p>
