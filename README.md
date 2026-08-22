@@ -1,5 +1,4 @@
-# 🤖 Projeto Edubot - Robótica Educacional
-
+# Projeto Edubot
 <p align="center">
   <img src="images/UnB.png" alt="Logo UnB" width="600"/>
 </p>
