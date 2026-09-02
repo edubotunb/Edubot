@@ -1,0 +1,677 @@
+\documentclass[conference]{IEEEtran}
+
+% -------------------------------------------------
+% Pacotes básicos
+% -------------------------------------------------
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{times}
+\usepackage{tgcursor}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\IEEEoverridecommandlockouts
+\pagenumbering{roman}
+
+% -------------------------------------------------
+% Configuração visual
+% -------------------------------------------------
+\definecolor{cinza}{RGB}{120,120,120}
+\definecolor{verde}{RGB}{0,120,0}
+\definecolor{azul}{RGB}{0,70,160}
+\definecolor{fundo}{RGB}{245,245,245}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azul,
+    urlcolor=azul
+}
+
+% -------------------------------------------------
+% Estilo das seções
+% -------------------------------------------------
+\titleformat{\section}
+{\large\bfseries}
+{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{\thesubsection}{0.5em}{}
+
+% -------------------------------------------------
+% Configuração de código
+% -------------------------------------------------
+\lstset{
+    language=C++,
+    backgroundcolor=\color{fundo},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{verde},
+    commentstyle=\color{cinza}\itshape,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    rulecolor=\color{black},
+    tabsize=2,
+    captionpos=b
+}
+
+% -------------------------------------------------
+% Documento
+% -------------------------------------------------
+\begin{document}
+
+\title{
+\Huge Apostila Didática:\\[0.2cm]
+\LARGE Introdução à Robótica com Sparki
+}
+
+\author{
+\IEEEauthorblockN{
+Projeto Edubot - Universidade de Brasília (UnB)
+}
+}
+
+\maketitle
+
+% -------------------------------------------------
+% Resumo
+% -------------------------------------------------
+\begin{abstract}
+Essa apostila foi criada pela equipe do Edubot para te ajudar a desvendar o \textit{Sparki}, o robozinho da Arcbotics. Nosso objetivo é mostrar que programar sensores e motores pode ser simples, divertido e acessível para qualquer estudante.
+\end{abstract}
+
+\vspace{0.5cm}
+
+% =================================================
+\section{Quem Somos Nós?}
+
+O Edubot é um Projeto de Extensão da Universidade de Brasília (UnB), apoiado pelo capítulo RAS (\textit{Robotics and Automation Society}) da IEEE.
+
+Nosso objetivo é incentivar jovens a conhecer as áreas de Tecnologia, Programação e Engenharia por meio de oficinas práticas em escolas públicas do Distrito Federal.
+
+\vspace{0.2cm}
+
+\noindent
+\textbf{Instagram:} \texttt{@projetoedubot}
+
+% =================================================
+\section{Introdução}
+
+O Sparki é um robô educacional equipado com sensores de distância, luz, motores e diversos outros recursos.
+
+Aprender programação não significa apenas “falar com máquinas”, mas desenvolver o chamado \textbf{pensamento computacional}: uma maneira organizada de resolver problemas grandes dividindo-os em partes menores.
+
+Essa habilidade melhora:
+\begin{itemize}
+    \item o raciocínio lógico;
+    \item a criatividade;
+    \item a organização;
+    \item a capacidade de resolver problemas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+% =================================================
+\section{Fundamentos e Lógica (Aula 1)}
+
+% -------------------------------------------------
+\subsection{O que é um robô?}
+
+Um robô é uma máquina:
+
+\begin{itemize}
+    \item autônoma;
+    \item presente no mundo físico;
+    \item capaz de perceber o ambiente;
+    \item capaz de agir sobre o ambiente.
+\end{itemize}
+
+O Sparki utiliza sensores para coletar informações e motores para realizar ações.
+
+\vspace{0.2cm}
+
+\textbf{Exemplo:}
+
+Um ar-condicionado liga e desliga sozinho, mas não toma decisões complexas sobre o ambiente físico como um robô faz.
+
+% -------------------------------------------------
+\subsection{O que é um algoritmo?}
+
+Algoritmo é uma sequência lógica de passos usada para resolver um problema.
+
+\vspace{0.2cm}
+
+\textbf{Exemplo: Escovar os dentes}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Pegar a escova e a pasta.
+    \item Colocar pasta na escova.
+    \item Escovar os dentes.
+    \item Enxaguar a boca.
+\end{enumerate}
+
+A ordem importa. Se inverter os passos, o algoritmo falha.
+
+% -------------------------------------------------
+\subsection{As funções \texttt{setup()} e \texttt{loop()}}
+
+Todo programa do Sparki utiliza duas funções principais:
+
+\begin{itemize}
+    \item \textbf{\texttt{setup()}}: executa apenas uma vez no início do programa;
+    \item \textbf{\texttt{loop()}}: executa continuamente enquanto o robô estiver ligado.
+\end{itemize}
+
+% -------------------------------------------------
+\subsection{Estrutura básica do programa}
+
+\begin{lstlisting}[caption={Estrutura básica do código}]
+#include <Sparki.h>
+
+void setup() {
+
+}
+
+void loop() {
+
+}
+\end{lstlisting}
+
+\vspace{0.5cm}
+
+% =================================================
+\section{Variáveis e Dados (Aula 2)}
+
+% -------------------------------------------------
+\subsection{O conceito de variáveis}
+
+Imagine um armário cheio de gavetas.
+
+Cada gaveta possui:
+\begin{itemize}
+    \item um nome;
+    \item um tipo de dado;
+    \item um valor armazenado.
+\end{itemize}
+
+Na programação, essas gavetas são chamadas de \textbf{variáveis}.
+
+\vspace{0.2cm}
+
+\textbf{Definição:}
+
+Variável é um espaço na memória usado para armazenar informações.
+
+% -------------------------------------------------
+\subsection{Tipos de dados}
+
+\begin{itemize}
+    \item \textbf{int}: números inteiros;
+    \item \textbf{float}: números decimais;
+    \item \textbf{char}: um único caractere;
+    \item \textbf{bool}: verdadeiro ou falso.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\begin{lstlisting}[caption={Exemplo de variáveis}]
+int idade = 15;
+float altura = 1.75;
+char letra = 'A';
+bool ligado = true;
+\end{lstlisting}
+
+% -------------------------------------------------
+\subsection{Operadores matemáticos}
+
+O Sparki frequentemente precisa realizar cálculos.
+
+\begin{itemize}
+    \item Soma: \texttt{+}
+    \item Subtração: \texttt{-}
+    \item Multiplicação: \texttt{*}
+    \item Divisão: \texttt{/}
+    \item Resto da divisão: \texttt{\%}
+\end{itemize}
+
+\vspace{0.2cm}
+ 
+\begin{lstlisting}[caption={Exemplo de operações}]
+int a = 10;
+int b = 3;
+
+int soma = a + b; // resultado  = 13
+int resto = a % b; //resultado = 1
+\end{lstlisting}
+
+% -------------------------------------------------
+\subsection{Operadores de comparação}
+
+\textbf{Atenção:}
+
+Para comparar igualdade usamos dois sinais:\texttt{ ==}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item \texttt{>} maior que
+    \item \texttt{<} menor que
+    \item \texttt{>=} maior ou igual
+    \item \texttt{<=} menor ou igual
+    \item \texttt{==} igual
+    \item \texttt{!=} diferente
+\end{itemize}
+
+\vspace{0.3cm}
+
+% =================================================
+\section{Condicionais e Decisão (Aula 3)}
+
+% -------------------------------------------------
+\subsection{\texttt{if} e \texttt{else}}
+
+As estruturas condicionais permitem que o robô tome decisões.
+
+\vspace{0.2cm}
+
+\textbf{Exemplo do cotidiano:}
+
+\begin{quote}
+“Se estiver chovendo, levo guarda-chuva. Senão, vou sem.”
+\end{quote}
+
+\vspace{0.2cm}
+
+\begin{lstlisting}[caption={Estrutura condicional}]
+if (distancia < 10) {
+
+    // Acao verdadeira
+
+} else {
+
+    // Acao falsa
+
+}
+\end{lstlisting}
+
+% -------------------------------------------------
+\subsection{Operadores lógicos}
+
+\begin{itemize}
+    \item \textbf{\&\& (E)}: as duas condições devem ser verdadeiras;
+    \item \textbf{|| (OU)}: apenas uma condição precisa ser verdadeira.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\begin{lstlisting}[caption={Exemplo com operadores logicos}]
+if (luz > 500 && distancia < 10) {
+
+    sparki.beep();
+
+}
+\end{lstlisting}
+
+\vspace{0.5cm}
+
+% =================================================
+\section{Movimentação (Aula 4)}
+% -------------------------------------------------
+\subsection{Motores}
+O Sparki possui, no total, 4 motores:
+\begin{itemize}
+    \item  (3) Motores de passo
+    \begin{itemize}
+        \item Eles atuam nas rodas e nas garras do Sparki, possibilitando serem movidas com precisão.
+        \item O Sparki conta com 2 motores de passo, um para cada roda, podendo atuar com direções diferentes em cada uma a fim de rotacionar o robô, além de um para as garras, as possibilitando fechar e abrir.
+        
+    \end{itemize}
+    \item Servo motor
+    \begin{itemize}
+        \item Controla a "cabeça" do Sparki independentemente do restante do robô, girando ela para os lados e mantendo o corpo estático.
+    \end{itemize}
+\end{itemize}
+\vspace{0.2cm}
+Para usarmos os motores e seus respectivos componentes, podemos usar alguns comandos(funções) no código, vamos abordar as principais.
+\subsection{Funções de movimentação}
+O Sparki consegue calcular movimentos com precisão para diferentes direções(Forward, Backward, Right, Left)
+
+\begin{itemize}
+    \item \texttt{sparki.moveForward(10);}
+    \begin{itemize}
+        \item Faz o Sparki andar 10 cm para frente;
+    \end{itemize}
+    \item \texttt{sparki.moveLeft(90);}
+    \begin{itemize}
+        \item O Sparki faz uma curva de 90 graus para a esquerda.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.2cm}
+
+Também é possível realizar movimentos utilizando o tempo, como andar para frente, esperar dois segundos andando, e parar:
+\begin{lstlisting}[caption={Movimento usando delay}]
+sparki.moveForward();
+
+delay(2000);
+
+sparki.moveStop();
+\end{lstlisting}
+\vspace{0.2cm}
+Para movermos a "cabeça" do Sparki e suas garras, são utilizadas as seguintes funções:
+\begin{itemize}
+    \item \texttt{sparki.servo(ângulo);}
+    \begin{itemize}
+        \item também existem alguns ângulos pré-definidos, como SERVO\_CENTER, por exemplo, que faz o Sparki olhar para frente.
+    \end{itemize}
+    \item \texttt{sparki.gripperOpen();}
+    \item \texttt{sparki.gripperClose();}
+    \item \texttt{sparki.gripperStop();}   
+    \begin{itemize}
+        \item Essas 3 funções são responsáveis pela garra, o gripperStop() faz com que o robô pare de executar o movimento de abrir ou fechar, sendo muito importante para evitar danos mecânicos no Sparki.
+    \end{itemize}
+\end{itemize}
+\vspace{0.2cm}
+É possível utilizar as funções sem argumentos de ângulo ou distância, isso faz com que elas continuem a executar indefinidamente, até que um sparki.moveStop() ou um sparki.gripperStop() sejam acionados
+
+\vspace{0.5cm}
+% =================================================
+\section{Repetição (Aula 5)}
+
+% -------------------------------------------------
+\subsection{Laços de Repetição (\texttt{while})}
+
+Em programação, muitas vezes precisamos repetir uma mesma ação várias vezes.  
+Imagine ter que escrever o comando para o robô andar para frente 100 vezes. Isso seria cansativo e pouco eficiente.
+
+Para resolver esse problema, usamos os \textbf{laços de repetição}.
+
+\vspace{0.2cm}
+
+\textbf{Ideia principal:}
+
+Um laço de repetição executa um bloco de código várias vezes enquanto uma condição for verdadeira.
+
+\vspace{0.3cm}
+
+\textbf{Exemplo do cotidiano:}
+
+\begin{quote}
+“Enquanto o ônibus não chegar, continue esperando.”
+\end{quote}
+
+Nesse caso:
+\begin{itemize}
+    \item a condição é “o ônibus não chegou”;
+    \item a ação repetida é “continuar esperando”.
+\end{itemize}
+
+Na programação, funciona da mesma forma.
+
+\vspace{0.3cm}
+
+\subsubsection{Estrutura do \texttt{while}}
+
+\begin{lstlisting}[caption={Estrutura basica do while}]
+while (condicao) {
+
+    // Codigo que sera repetido
+
+}
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+O computador verifica a condição:
+\begin{itemize}
+    \item Se for \textbf{verdadeira}, o código executa;
+    \item Quando virar \textbf{falsa}, o laço termina.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\subsubsection{Exemplo simples}
+
+Neste exemplo, o Sparki irá emitir um som 5 vezes.
+
+\begin{lstlisting}[caption={Repetindo uma acao}]
+int contador = 0;
+
+while (contador < 5) {
+
+    sparki.beep();
+
+    delay(500);
+
+    contador = contador + 1;
+
+}
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+Nesse exemplo:
+\begin{itemize}
+    \item a variável \texttt{contador} começa valendo 0;
+    \item o laço continua enquanto o contador for menor que 5;
+    \item o Sparki faz um som;
+    \item o programa espera meio segundo;
+    \item o contador aumenta em 1;
+    \item depois de 5 repetições, o laço termina.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\subsubsection{Usando repetição no Sparki}
+
+Os laços são muito úteis em robótica, porque o robô precisa verificar sensores constantemente.
+
+\vspace{0.2cm}
+
+\textbf{Exemplo:}
+
+O robô deve continuar andando até encontrar uma parede.
+
+\begin{lstlisting}[caption={Sparki andando ate encontrar obstaculo}]
+int distancia = sparki.ping();
+
+while (distancia > 10) {
+
+    sparki.moveForward();
+
+    distancia = sparki.ping();
+
+}
+
+sparki.moveStop();
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+Passo a passo:
+\begin{enumerate}
+    \item O sensor mede a distância;
+    \item Se a distância for maior que 10 cm, o robô anda;
+    \item O sensor mede novamente;
+    \item Quando a parede ficar próxima, o laço termina;
+    \item O robô para.
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\subsubsection{Cuidado com loops infinitos}
+
+Um erro muito comum é criar um laço que nunca termina.
+
+\vspace{0.2cm}
+
+\begin{lstlisting}[caption={Exemplo de loop infinito}]
+while (true) {
+
+    sparki.moveForward();
+
+}
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+Nesse caso:
+\begin{itemize}
+    \item a condição sempre será verdadeira;
+    \item o robô nunca sairá do laço;
+    \item ele continuará andando para sempre.
+\end{itemize}
+
+\vspace{0.2cm}
+
+Por isso, é importante garantir que a condição possa mudar em algum momento.
+
+\vspace{0.3cm}
+
+\subsubsection{Resumo}
+
+Os laços de repetição permitem:
+\begin{itemize}
+    \item automatizar tarefas;
+    \item evitar código repetido;
+    \item criar comportamentos inteligentes;
+    \item fazer o robô reagir continuamente ao ambiente.
+\end{itemize}
+
+\vspace{0.5cm}
+% =================================================
+\section{Funções (Aula 7)}
+
+% -------------------------------------------------
+
+\subsection{O que são?}
+Uma função é um conjunto de passos que executa uma tarefa específica
+no programa. Uma função pode receber informações para auxiliar uma
+tarefa ou projeto, resolver algo mais complicado nesta função para ser
+usado no resto do programa.
+
+\vspace{0.2cm}
+
+\subsection{Como declarar funções?}
+Para declarar uma função, deve nomeá-la e em seguida definir seus
+parâmetros. Como por exemplo:
+
+\begin{lstlisting}[caption={Declarando uma função}]
+float calcularmedia(float v1,float v2){
+    float media = (v1 + v2)/2;
+    return media;
+}
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+Nesse exemplo, uma função \texttt{calcularmedia} é declarada, ela retorna um valor float, e usa como parâmetros os floats v1 e v2. 
+O que for definido dentro dela é o que vai ser executado quando a função for chamada:
+\begin{enumerate}
+    \item Ela cria uma variável chamada \texttt{media} dentro dela
+    \item Soma v1 + v2 e divide o resultado por 2
+    \item Atribui o valor final para a variável \texttt{media}
+    \item Retorna essa variavel para onde foi chamada
+\end{enumerate}
+
+\vspace{0.2cm}
+Lembrem-se: Funções não necessariamente precisam de parâmetros! sparki.moveLeft(), por exemplo, nada mais é que uma função pré-programada dentro da biblioteca sparki, que pode ser utilizada sem parâmetros!
+\vspace{0.2cm}
+
+\subsection{Chamar funções}
+Agora que declaramos a função, sempre que formos tirar uma média de dois números, basta chamarmos ela no código dando os parâmetros necessários, que no nosso caso, são dois números. É sempre bom, caso a função retorne um valor, o armazenar em uma variável, assim podemos usá-la em outra parte do código.
+\vspace{0.2cm}
+
+\begin{lstlisting}[caption={Chamando uma função}]
+float media = calcularmedia(50,250);
+\end{lstlisting}
+
+\vspace{0.2cm}
+Nesse exemplo, os parâmetros enviados foram os números 50 e 250, e a nova variável \texttt{media} recebe o valor que a função calculou e retornou, nesse exemplo, 150.
+
+
+\vspace{0.5cm}
+% =================================================
+\section{LCD (Aula 8)}
+\subsection{O que é o LCD?}
+Uma das diversas funcionalidades do Sparki é o LCD, um pequeno monitor que pode mostrar informações como texto, números, formas geométricas, e, com um pouco de código, até mesmo animações! 
+\subsection{Como usar o LCD}
+Primeiramente, vamos utilizar uma função muito importante chamada \texttt{sparki.clearLCD()}. Ela apaga o conteúdo que está presente na tela, então toda vez que formos começar a utilizar o painel ou atualizar algo na tela, devemos usá-la.
+
+Agora, para conseguirmos escrever o texto na tela, utilizaremos o \texttt{sparki.print();} ou a sua variação que pula automaticamente para a próxima linha ao final do texto, o \texttt{sparki.println();}. Isso vai fazer com que o argumento que você botar dentro da função seja escrito no LCD.
+
+\begin{lstlisting}[caption={Algoritmo para escrever 'Hello World!'}]
+void setup(){
+    sparki.clearLCD();
+    sparki.print('Hello World!');
+}
+\end{lstlisting}
+
+Se você testou esse código, provavelmente viu que não apareceu nada na tela: isso ocorre pois devemos atualizar o LCD para que ele carregue o que foi definido, usando o \texttt{sparki.updateLCD();} no fim do código.
+
+\begin{lstlisting}[caption={Algoritmo corrigido e funcional}]
+void setup(){
+    sparki.clearLCD();
+    sparki.print("Hello World!");
+    sparki.updateLCD();
+}
+\end{lstlisting}
+
+Não vamos entrar muito a fundo, mas existem também funções que conseguem desenhar formas geométricas, como \texttt{sparki.drawCircle();} e a \texttt{sparki.drawLine();}. Usando elas e algumas outras, animações e desenhos podem ser feitos! Nesses casos, é importante adicionar um delay() no código, um intervalo de tempo, para dar tempo para o software trabalhar.
+
+\vspace{0.5cm}
+% =================================================
+\section{Sensor Ultrassônico (Aula 9)}
+\subsection{Sensores, o que são?}
+Vamos abordar 2 sensores principais responsáveis por captar informações do mundo real e traduzir para uma linguagem que ele entende. Nessa seção, vamos entrar a fundo no sensor Ultrassônico, responsável por medir distâncias.
+\subsection{Funcionamento}
+O sensor ultrassônico, localizado na cabeça do Sparki, funciona emitindo ondas sonoras e medindo o tempo que elas demoram para ir, refletir em um objeto, e voltar. Com essa informação, ele consegue deduzir a distância que o objeto está do Sparki, se houver algum.
+
+Para obtermos o valor dessa distância, usamos a função \texttt{sparki.ping();} que retorna um valor numérico em centímetros, da distância do objeto mais próximo. Assim, podemos combinar essa informação com condicionais e assim alterar o comportamento do Sparki, sendo importante lembrar que essa função retorna -1 caso não haja objetos no alcance. 
+
+\vspace{0.5cm}
+% =================================================
+\section{Sensor Infravermelho (Aula 10)}
+O Sparki tem 2 componentes que envolvem ondas infravermelhas: os sensores de refletância, que identificam linhas e mudanças na superfície e o controle infravermelho, que pode ser usado para receber comandos de um controle, por exemplo.
+\subsection{Sensores de refletância}
+Contando com 5 deles na parte de baixo, eles funcionam soltando um raio infravermelho e recebendo ele de volta, analisando o quanto de luz foi absorvida pela superfície, e com base nisso determinando a cor dela. Seu principal uso é identificar uma fita preta, caminhando sobre ela no que é popularmente conhecido como seguidor de linhas.
+\begin{lstlisting}[caption={seguidor de linhas(básico)}]
+void loop(){
+    int sensor = sparki.lineCenter();
+    if (sensor < 500){
+        sparki.moveForward();
+    }
+}
+\end{lstlisting}
+
+Nesse exemplo, o \texttt{sparki.lineCenter();} retorna o valor do sensor central, e salva na variável \texttt{sensor}, e após isso compara com 500, um valor de exemplo para o valor que é retornado de uma superfície preta, como uma fita. Se o valor for menor que 500, assume-se que é uma linha preta, então ele segue reto.
+
+\subsection{Controle infravermelho}
+Além disso, o Sparki conta com um controle infravermelho que consegue se comunicar com o robô, enviando comandos. As ondas são enviadas em velocidades enormes, e o sensor, localizado na frente do Sparki, as recebe e as decodifica. Para ler elas no código, usamos a função \texttt{sparki.readIR();}, que retorna o valor numérico correspondente ao botão do controle.
+
+\vspace{0.5cm}
+% =================================================
+\section{Conclusão}
+
+A robótica une programação, eletrônica e criatividade para resolver problemas reais.
+
+Esperamos que esta apostila tenha sido um primeiro passo divertido e inspirador na sua jornada com tecnologia e engenharia.
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\textbf{Bom aprendizado e divirta-se programando!}
+\end{center}
+
+
+\end{document}
